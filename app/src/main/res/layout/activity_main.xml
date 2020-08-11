@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI calculator"
+            android:textSize="30sp"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimaryDark"
+    />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height : "
+                    android:textSize="20sp"
+            />
+
+            <EditText
+                    android:id="@+id/EditText_height"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:autofillHints="165 cm"
+                    android:hint="165"
+                    tools:ignore="LabelFor"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cm"
+                    android:textSize="20sp"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight : "
+                    android:textSize="20sp"
+            />
+
+            <EditText
+                    android:id="@+id/EditText_weight"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    tools:ignore="LabelFor"
+                    android:autofillHints="50"
+                    android:hint="50"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kg"
+                    android:textSize="20sp"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/Button_submit"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="submit"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:background="@color/colorAccent"
+            android:textColor="#ffffff"
+    />
+
+    <LinearLayout
+            android:id="@+id/LinearLayout_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#E6E6E6"
+            android:visibility="invisible"
+            android:layout_marginTop="50dp"
+    >
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your BMI is ..."
+                    android:textSize="30sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="30dp"
+            />
+
+            <TextView
+                    android:id="@+id/TextView_bmi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/colorPrimary"
+            />
+
+            <TextView
+                    android:id="@+id/TextView_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_margin="30dp"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+            />
+
+            <Button
+                    android:id="@+id/Button_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="calculate again"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="20dp"
+                    android:layout_margin="20dp"
+                    android:textColor="#ffffff"
+                    android:background="@color/colorAccent"
+            />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
